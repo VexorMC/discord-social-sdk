@@ -12,4 +12,4 @@ We welcome contributions from the community! If you would like to contribute to 
 5. Once approved, your changes will be merged into the main branch.
 
 ## License
-This project is licensed under the CC BY-NC-SA 4.0 License. For more details, please refer to the [LICENSE](LICENSE) file.
+This project is licensed under the CC BY-NC-SA 4.0 License. For more details, please refer to the [LICENSE](LICENSE.md) file.
