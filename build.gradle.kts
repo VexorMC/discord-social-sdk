@@ -1,5 +1,6 @@
 plugins {
     `java-library`
+    `maven-publish`
 }
 
 group = "com.frostclient"
@@ -9,16 +10,30 @@ repositories {
     mavenCentral()
 }
 
-repositories {
-    maven {
-        url = uri("https://pkg.frst.cloud/releases")
-        credentials {
-            username = System.getenv("ALIAS") ?: ""
-            password = System.getenv("TOKEN") ?: ""
+java {
+    withSourcesJar()
+    withJavadocJar()
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            from(components["java"])
+            
+            artifact(tasks.named("sourcesJar"))
+            artifact(tasks.named("javadocJar"))
         }
-        authentication {
-            create<BasicAuthentication>("basic")
+    }
+    repositories {
+        maven {
+            url = uri("https://pkg.frst.cloud/releases")
+            credentials {
+                username = System.getenv("ALIAS") ?: ""
+                password = System.getenv("TOKEN") ?: ""
+            }
+            authentication {
+                create<BasicAuthentication>("basic")
+            }
         }
     }
 }
-
