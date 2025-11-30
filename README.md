@@ -3,6 +3,13 @@ The Discord Social SDK is a powerful tool that allows developers to integrate Di
 
 This repository contains the Java bindings for the Discord Social SDK, enabling Java developers to leverage Discord's social capabilities in their applications.
 
+## Operating Systems
+We currently only have support for Windows.
+
+## Getting the Library
+You can get it from our Maven repository: https://pkg.frst.cloud/#/releases/com/frostclient/discord-social-sdk.
+We include binaries for the Windows operating system.
+
 ## Contributing
 We welcome contributions from the community! If you would like to contribute to these bindings, please follow these steps:
 1. Fork the repository.
@@ -12,4 +19,4 @@ We welcome contributions from the community! If you would like to contribute to 
 5. Once approved, your changes will be merged into the main branch.
 
 ## License
-This project is licensed under the CC BY-NC-SA 4.0 License. For more details, please refer to the [LICENSE](LICENSE) file.
+This project is licensed under the CC BY-NC-SA 4.0 License. For more details, please refer to the [LICENSE](LICENSE.md) file.
