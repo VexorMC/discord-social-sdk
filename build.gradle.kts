@@ -13,8 +13,8 @@ repositories {
     maven {
         url = uri("https://pkg.frst.cloud/releases")
         credentials {
-            username = System.getenv("alias") ?: ""
-            password = System.getenv("token") ?: ""
+            username = System.getenv("ALIAS") ?: ""
+            password = System.getenv("TOKEN") ?: ""
         }
         authentication {
             create<BasicAuthentication>("basic")
