@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "2.1.21"
+    `java-library`
 }
 
 group = "com.frostclient"
@@ -9,13 +9,16 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    testImplementation(kotlin("test"))
+repositories {
+    maven {
+        url = uri("https://pkg.frst.cloud/releases")
+        credentials {
+            username = System.getenv("alias") ?: ""
+            password = System.getenv("token") ?: ""
+        }
+        authentication {
+            create<BasicAuthentication>("basic")
+        }
+    }
 }
 
-tasks.test {
-    useJUnitPlatform()
-}
-kotlin {
-    jvmToolchain(21)
-}
